@@ -1,7 +1,10 @@
 module.exports = {
-  // ... otras configuraciones de ESLint
+  extends: [
+    'react-app',
+    'react-app/jest',
+    // Otras configuraciones extendidas si las tienes
+  ],
   rules: {
-    // Otras reglas de ESLint
-    'no-restricted-globals': ['error', 'event', 'fdescribe'], // Excluye 'removeEventListener'
+    'no-restricted-globals': ['error', 'fdescribe'], // Excluye 'event' y 'removeEventListener'
   },
 };
